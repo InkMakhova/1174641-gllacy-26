@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Inna Makhova](https://up.htmlacademy.ru/htmlcss/26/user/1174641).
-* Наставник: `Андрей Островский`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
