@@ -45,14 +45,17 @@
        <li>
           <a href="" aria-label="Поиск"></a>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <input type="text" name="search" id="search" placeholder="Что ищем?">
+            <input type="search" name="search" id="search" placeholder="Что ищем?">
+            <label for="search" class="visually hidden">Поиск</label>
           </form>
         </li>
         <li>
           <a href="">Войти</a>
-          <form action="https://echo.htmlacademy.ru" method="get">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Электронная почта">
+            <label for="email" class="visually hidden">Электронный адрес</label>
             <input type="password" name="password" id="password" placeholder="Пароль">
+            <label for="password" class="visually hidden">Пароль</label>
             <button type="submit">Войти</button>
             <a href="">Забыли пароль?</a>
             <a href="">Новая регистрация</a>
@@ -121,9 +124,9 @@
       
       <section>
         <h1>Сливочное мороженое</h1>
-        <ul>
-          <li>
-            <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <ul>
+            <li>
               <label for="sort">Сортировка:</label>
               <select name="sort" id="sort">
                 <option>по популярности</option>
@@ -131,44 +134,38 @@
                 <option>сначала дорогие</option>
                 <option>по жирности</option>
               </select>
-            </form>
-          </li>
-          <li>
-            <form action="https://echo.htmlacademy.ru" method="get">
+            </li>
+            <li>
               <label for="range">Цена: 100 руб. – 500 руб.</label>
               <input type="range" name="range" id="range" min="100" max="500" step="50">  
-            </form>
-          </li>
-          <li>
-            <form action="https://echo.htmlacademy.ru" method="get">
+            </li>
+            <li>
               <p>Жирность:</p>
-              <input type="radio" name="radio" id="radio1" value="0%">
-              <label for="radio1">0%</label>
-              <input type="radio" name="radio" id="radio2" value="до 10%" checked>
-              <label for="radio2">до 10%</label>
-              <input type="radio" name="radio" id="radio3" value="до 30%">
-              <label for="radio3">до 30%</label>
-              <input type="radio" name="radio" id="radio4" value="выше 30%">
-              <label for="radio4">выше 30%</label>
-            </form>
-          </li>
-          <li>
-            <form action="https://echo.htmlacademy.ru" method="get">
+              <input type="radio" name="radio" id="fat-free" value="0%">
+              <label for="fat-free">0%</label>
+              <input type="radio" name="radio" id="less10" value="до 10%" checked>
+              <label for="less10">до 10%</label>
+              <input type="radio" name="radio" id="less30" value="до 30%">
+              <label for="less30">до 30%</label>
+              <input type="radio" name="radio" id="more30" value="выше 30%">
+              <label for="more30">выше 30%</label>
+            </li>
+            <li>
               <p>Наполнители:</p>
-              <input type="checkbox" name="checkbox" id="check1" value="chocolate" checked>
-              <label for="check1">шоколадные</label>
-              <input type="checkbox" name="checkbox" id="check2" value="sugar" checked>
-              <label for="check2">сахарные присыпки</label>
-              <input type="checkbox" name="checkbox" id="check3" value="fruits">
-              <label for="check3">фрукты</label>
-              <input type="checkbox" name="checkbox" id="check4" value="syrups">
-              <label for="check4">сиропы</label>
-              <input type="checkbox" name="checkbox" id="check5" value="jam">
-              <label for="check5">джемы</label>
-            </form>
-          </li>
-        </ul>
-        <button type="button">Применить</button>
+              <input type="checkbox" name="chocolate" id="chocolate" value="chocolate" checked>
+              <label for="chocolate">шоколадные</label>
+              <input type="checkbox" name="sugar" id="sugar" value="sugar" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input type="checkbox" name="fruits" id="fruits" value="fruits">
+              <label for="fruits">фрукты</label>
+              <input type="checkbox" name="syrups" id="syrups" value="syrups">
+              <label for="syrups">сиропы</label>
+              <input type="checkbox" name="jam" id="jam" value="jam">
+              <label for="jam">джемы</label>
+            </li>
+          </ul>
+          <button type="button">Применить</button>
+        </form>
       </section>
 
       <section>

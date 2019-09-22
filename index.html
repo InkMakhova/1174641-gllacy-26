@@ -45,14 +45,17 @@
         <li>
           <a href="" aria-label="Поиск"></a>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <input type="text" name="search" id="search" placeholder="Что ищем?">
+            <input type="search" name="search" id="search" placeholder="Что ищем?" aria-label="Поиск">
+            <label for="search" class="visually hidden">Поиск</label>
           </form>
         </li>
         <li>
           <a href="">Войти</a>
-          <form action="https://echo.htmlacademy.ru" method="get">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Электронная почта">
+            <label for="email" class="visually hidden">Электронный адрес</label>
             <input type="password" name="password" id="password" placeholder="Пароль">
+            <label for="password" class="visually hidden">Пароль</label>
             <button type="submit">Войти</button>
             <a href="">Забыли пароль?</a>
             <a href="">Новая регистрация</a>
@@ -254,14 +257,14 @@
 
       <section>
         <h2 class="visually-hidden">Подписка на новости</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="post">
           <p>
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
             вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
               ерунды. Честно =) 
           </p>
-          <input type="email" name="email-for-news" id="email-for-news"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-            placeholder="Электронная почта">
+          <label for="email-for-news" class="visually-hidden">Электронный адрес для подписки</label>
+          <input type="email" name="email-for-news" id="email-for-news" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Электронная почта">
           <button type="submit">Отправить</button>
         </form>
       </section>
@@ -291,11 +294,10 @@
           (с 10 до 20 ежедневно)
         </p>
         <a href="">Форма обратной связи</a>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="post">
           <p>Мы обязательно вам ответим!</p>
-          <input type="text" name="Name" id="name" placeholder="Как вас зовут?">
-          <input type="email" name="email-for-answer" id="email-for-answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            placeholder="Ваша почта для ответа?">
+          <input type="text" name="name" id="name" placeholder="Как вас зовут?">
+          <input type="email" name="email-for-answer" id="email-for-answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша почта для ответа?">
           <textarea name="textarea" id="textarea-field" cols="20" rows="10" placeholder="Напишите что-нибудь..."></textarea>
           <button type="submit">Отправить</button>
         </form>
