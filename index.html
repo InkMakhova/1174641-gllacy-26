@@ -43,13 +43,63 @@
       </nav>
       <ul>
         <li>
-          <a href="">Поиск</a>
+          <a href="" aria-label="Поиск"></a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="text" name="search" id="search" placeholder="Что ищем?">
+          </form>
         </li>
         <li>
           <a href="">Войти</a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Электронная почта">
+            <input type="password" name="password" id="password" placeholder="Пароль">
+            <button type="submit">Войти</button>
+            <a href="">Забыли пароль?</a>
+            <a href="">Новая регистрация</a>
+          </form>
         </li>
         <li>
           <a href="">Корзина</a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <table>
+              <tr>
+                <td>
+                  <button type="button">X</button>
+                </td>
+                <td>
+                  <img src="img/1.jpg" width="33" height="33" alt="Иконка пломбира с апельсиновым джемом">
+                </td>
+                <td>
+                  <a href="">Пломбир с апельсиновым джемом</a>
+                </td>
+                <td>
+                  1,5 кг х <span>200 руб.</span>
+                </td>
+                <td>
+                  300 руб.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button">X</button>
+                </td>
+                <td>
+                  <img src="img/3.jpg" width="33" height="33" alt="Иконка клубничного пломбира с присыпкой">
+                </td>
+                <td>
+                  <a href="">Клубничный пломбир с присыпкой из белого шоколада</a>
+                </td>
+                <td>
+                  1,5 кг х <span>300 руб.</span>
+                </td>
+                <td>
+                  450 руб.
+                </td>
+              </tr>
+            </table>
+            <p>Итого: 750 руб.</p>
+            <a href="">Оформить заказ</a>
+          </form>
         </li>
       </ul>
       <p>С 10 до 20, ежедневно</p>
@@ -57,7 +107,7 @@
     </header>
 
     <main>
-      <h1>GllacyShop</h1>
+      <h1 class="visually-hidden">GllacyShop</h1>
 
       <section>
         <ul>
@@ -115,7 +165,7 @@
       </section>
 
       <section>
-        <h2>Популярные товары</h2>
+        <h2 class="visually-hidden">Популярные товары</h2>
         <ul>
           <li>
             <a href="">
@@ -203,16 +253,17 @@
       </section>
 
       <section>
-        <h2>Подписка на новости</h2>
-        <p>
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
-           вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
-            ерунды. Честно =) 
-        </p>
-        <input>
-        <button type="button">
-          Отправить
-        </button>
+        <h2 class="visually-hidden">Подписка на новости</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
+            вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
+              ерунды. Честно =) 
+          </p>
+          <input type="email" name="email-for-news" id="email-for-news"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+            placeholder="Электронная почта">
+          <button type="submit">Отправить</button>
+        </form>
       </section>
 
       <section>
@@ -221,7 +272,7 @@
       </section>
 
       <section>
-        <h2>Как нас найти</h2>
+        <h2 class="visually-hidden">Как нас найти</h2>
         <p>
           Адрес главного офиса и офлайн-магазина:
         </p>
@@ -240,6 +291,14 @@
           (с 10 до 20 ежедневно)
         </p>
         <a href="">Форма обратной связи</a>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>Мы обязательно вам ответим!</p>
+          <input type="text" name="Name" id="name" placeholder="Как вас зовут?">
+          <input type="email" name="email-for-answer" id="email-for-answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            placeholder="Ваша почта для ответа?">
+          <textarea name="textarea" id="textarea-field" cols="20" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
 

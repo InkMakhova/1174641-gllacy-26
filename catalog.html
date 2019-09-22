@@ -42,14 +42,64 @@
         </ul>
       </nav>
       <ul>
-        <li>
-          <a href="">Поиск</a>
+       <li>
+          <a href="" aria-label="Поиск"></a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="text" name="search" id="search" placeholder="Что ищем?">
+          </form>
         </li>
         <li>
           <a href="">Войти</a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Электронная почта">
+            <input type="password" name="password" id="password" placeholder="Пароль">
+            <button type="submit">Войти</button>
+            <a href="">Забыли пароль?</a>
+            <a href="">Новая регистрация</a>
+          </form>
         </li>
         <li>
           <a href="">Корзина</a>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <table>
+              <tr>
+                <td>
+                  <button type="button">X</button>
+                </td>
+                <td>
+                  <img src="img/1.jpg" width="33" height="33" alt="Иконка пломбира с апельсиновым джемом">
+                </td>
+                <td>
+                  <a href="">Пломбир с апельсиновым джемом</a>
+                </td>
+                <td>
+                  1,5 кг х <span>200 руб.</span>
+                </td>
+                <td>
+                  300 руб.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button">X</button>
+                </td>
+                <td>
+                  <img src="img/3.jpg" width="33" height="33" alt="Иконка клубничного пломбира с присыпкой">
+                </td>
+                <td>
+                  <a href="">Клубничный пломбир с присыпкой из белого шоколада</a>
+                </td>
+                <td>
+                  1,5 кг х <span>300 руб.</span>
+                </td>
+                <td>
+                  450 руб.
+                </td>
+              </tr>
+            </table>
+            <p>Итого: 750 руб.</p>
+            <a href="">Оформить заказ</a>
+          </form>
         </li>
       </ul>
       <p>С 10 до 20, ежедневно</p>
@@ -73,20 +123,49 @@
         <h1>Сливочное мороженое</h1>
         <ul>
           <li>
-            <p>Сортировка:</p>
-            <!-- Форма -->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label for="sort">Сортировка:</label>
+              <select name="sort" id="sort">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </form>
           </li>
           <li>
-            <p>Цена: 100 руб. – 500 руб.</p>
-            <!-- Форма -->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label for="range">Цена: 100 руб. – 500 руб.</label>
+              <input type="range" name="range" id="range" min="100" max="500" step="50">  
+            </form>
           </li>
           <li>
-            <p>Жирность:</p>
-            <!--форма-->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <p>Жирность:</p>
+              <input type="radio" name="radio" id="radio1" value="0%">
+              <label for="radio1">0%</label>
+              <input type="radio" name="radio" id="radio2" value="до 10%" checked>
+              <label for="radio2">до 10%</label>
+              <input type="radio" name="radio" id="radio3" value="до 30%">
+              <label for="radio3">до 30%</label>
+              <input type="radio" name="radio" id="radio4" value="выше 30%">
+              <label for="radio4">выше 30%</label>
+            </form>
           </li>
           <li>
-            <p>Наполнители</p>
-             <!--форма-->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <p>Наполнители:</p>
+              <input type="checkbox" name="checkbox" id="check1" value="chocolate" checked>
+              <label for="check1">шоколадные</label>
+              <input type="checkbox" name="checkbox" id="check2" value="sugar" checked>
+              <label for="check2">сахарные присыпки</label>
+              <input type="checkbox" name="checkbox" id="check3" value="fruits">
+              <label for="check3">фрукты</label>
+              <input type="checkbox" name="checkbox" id="check4" value="syrups">
+              <label for="check4">сиропы</label>
+              <input type="checkbox" name="checkbox" id="check5" value="jam">
+              <label for="check5">джемы</label>
+            </form>
           </li>
         </ul>
         <button type="button">Применить</button>
