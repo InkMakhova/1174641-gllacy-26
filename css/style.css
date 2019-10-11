@@ -37,10 +37,6 @@ body {
   text-align: left;
 }
 
-a {
-  color: #ffffff;
-}
-
 img {
   max-width: 100%;
 }
@@ -211,6 +207,7 @@ img {
 
 .contact-phone {
   display: block;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   font-size: 22px;
@@ -237,6 +234,10 @@ img {
   margin-top: 28px;
   margin-left: 27px;
   margin-bottom: 13px; 
+}
+
+.breadcrumbs a:visited {
+  color: #ffffff;
 }
 
 .breadcrumbs li:last-child a {
@@ -270,6 +271,7 @@ img {
 }
 
 .button-both {
+  color: #ffffff;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -360,6 +362,7 @@ img {
 }
 
 .ice-choice a {
+  color: #ffffff;
   width: 247px;
   font-size: 16px;
   font-weight: 500;
@@ -557,7 +560,7 @@ img {
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 20px;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 .send:hover {
@@ -603,7 +606,16 @@ img {
   font-style: normal;
 }
 
+.contact-phone-form a {
+  color: #323232;
+}
+
+.contact-phone-form a:hover {
+  color: #ffbc9e;
+}
+
 .form-return {
+  color: #ffffff;
   width: 252px;
   height: 44px;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
