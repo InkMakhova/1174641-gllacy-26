@@ -388,11 +388,16 @@ img {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
 }
 
-.item-list {
-  list-style: none;
+.item-list a:visited {
+  color: #ffffff;
+}
+.item-list a:hover,
+.item-list a:active {
+  color: #ffbc9e;
 }
 
-.item-list li {
+.item {
+  list-style: none;
   box-sizing: border-box;
   width: 293px;
   padding-top: 6px;
@@ -403,16 +408,16 @@ img {
   position: relative;
 }
 
-.item-list li:hover {
+.item:hover {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.2);
   background-color: rgba(248, 247, 244, 0.2);
 }
 
-.item-list img {
+.item img {
   border-radius: 50%;
 }
 
-.item-list svg {
+.item svg {
   position: absolute;
   top: 6px;
   left: 13px;
@@ -466,14 +471,6 @@ img {
 .button-view:active {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
-}
-
-.item-list a:visited {
-  color: #ffffff;
-}
-.item-list a:hover,
-.item-list a:active {
-  color: #ffbc9e;
 }
 
 .page-title {
@@ -580,6 +577,7 @@ img {
 
 .item-pages a {
   text-decoration: none;
+  text-align: center;
 }
 
 .item-pages a:visited {
@@ -587,6 +585,7 @@ img {
 }
 
 .item-pages li {
+  box-sizing: border-box;
   display: inline-block;
   width: 27px;
   height: 26px;
@@ -595,7 +594,7 @@ img {
 }
 
 .item-pages li:first-child svg{
-  transform: rotate(180); /*не работает поворот*/
+  transform: rotate(180deg); /*не работает поворот*/
 }
 
 .item-pages li:last-child path{
