@@ -9,43 +9,45 @@
   <body>
 
     <header>
-      <div class="header-flex">
-        <div class="header-flex-left">
-          <a href="index.html">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси" class="logo-glaccy">
+      <div class="header-container">
+        <div class="header-container-part">
+          <a href="index.html" class="logo-glaccy">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
           </a>
           <nav>
             <ul class="nav-list">
-              <li>
-                <a href="catalog.html" class="nav-link">Каталог</a>
-                <ul class="menu">
-                  <li>
-                    <a href="">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="">Мелорин</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="" class="nav-link">Доставка и оплата</a>
-              </li>
-              <li>
-                <a href="" class="nav-link">О компании</a>
-              </li>
+              <div class="nav-list-container">
+                <li>
+                  <a href="catalog.html" class="nav-link">Каталог</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="">Мелорин</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="nav-link">Доставка и оплата</a>
+                </li>
+                <li>
+                  <a href="" class="nav-link">О компании</a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
-        <div class="header-flex-right">
+        <div class="header-container-part">
           <ul class="main-menu-list">
             <li>
               <a href="" aria-label="Поиск" class="main-menu-link search">
@@ -71,7 +73,7 @@
               </form>
             </li>
             <li>
-              <a href="" class="basket-full">
+              <a href="" class="main-menu-link basket-full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
                 2 товара
               </a>
@@ -332,7 +334,7 @@
     </main>
 
     <footer>
-      <div class="footer-flex">
+      <div class="footer-contain">
         <ul class="social">
           <li>
             <a href="https://twitter.com/" aria-label="Глейси в Твиттере" class="twitter"></a>
@@ -349,27 +351,23 @@
         </ul>
 
         <ul class="common">
-          <div class="common-flex">
-            <div class="common-flex-left"> 
-              <li class="for-providers">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>
-                <a href="">Для поставщиков</a>
-              </li>
-              <li>
-                <a href="">О производстве</a>
-              </li>
-            </div>
-            <div class="common-flex-right">
-              <li>
-                <a href="">Наши документы</a>
-              </li>
-              <li>
-                <a href="">Экологические стандарты</a>
-              </li>
-            </div>
+          <div class="common-container"> 
+            <li class="for-providers">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>
+              <a href="">Для поставщиков</a>
+            </li>
+            <li>
+              <a href="">О производстве</a>
+            </li>
+            <li>
+              <a href="">Наши документы</a>
+            </li>
+            <li>
+              <a href="">Экологические стандарты</a>
+            </li>
           </div>
         </ul>
-        <div class="htmlacademy-flex">
+        <div class="htmlacademy-container">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип студии разработки сайта">
           <p class="htmlacademy">Сделано в 
             <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019

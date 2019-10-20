@@ -41,7 +41,7 @@ img {
   max-width: 100%;
 }
 
-.header-flex {
+.header-container {
   /*background-color: red;*/
   display: flex;
   flex-wrap: wrap;
@@ -55,41 +55,38 @@ img {
   /*background-color: palevioletred;*/
 }
 
-.header-flex-left {
+.header-container-part {
   display: flex;
   flex-wrap: wrap;
   /*background-color: greenyellow;*/
   justify-content: flex-start;
   align-items: center;
+  margin-right: 17px;
 }
-
-.header-flex-right {
+  
+.nav-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
-  /*background-color: yellow;*/
-  margin-right: 17px;
+  /*background-color: palevioletred;*/
 }
 
 .nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   list-style: none;
-  /*background-color: palevioletred;*/
   padding: 0;
   padding-left: 10px;
 }
 
 .nav-link {
   box-sizing: border-box;
+  list-style: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   width: 87px;
   border-radius: 15px;
   padding: 5px 13px;
+  margin-right: 5px;
 }
 
 .nav-link:visited {
@@ -112,7 +109,7 @@ img {
   padding: 5px 13px;
 }
 
-.menu {
+.submenu {
   display: none;
   list-style: none;
   box-sizing: border-box;
@@ -130,19 +127,19 @@ img {
   padding-left: 21px;
 }
 
-.menu a {
+.submenu a {
   box-sizing: border-box;
 }
 
-.menu a:visited {
+.submenu a:visited {
   color: #323232;
 }
 
-.menu a:hover {
+.submenu a:hover {
   background-color: #fbded8;
 }
 
-.menu a:active {
+.submenu a:active {
   background-color: #f6b5a5;
 }
 
@@ -178,13 +175,12 @@ img {
 }
 
 .main-menu-link:hover g,
- .main-menu-link:hover path {
+.main-menu-link:hover:not(.basket-full) path {
   fill: #000000;
 }
 
 .search {
   padding: 8px;
-  /*border-radius: 100%;*/
 }
 
 .main-menu-link:not(.search) svg {
@@ -194,18 +190,21 @@ img {
 .basket-full {
   display: flex;
   box-sizing: border-box;
-  width: 117px;
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
   border-radius: 20px;
-  padding: 8px 17px;
+  padding: 8px 16px;
 }
 
 .basket-full svg {
   margin-right: 5px;
+}
+
+.basket-full:visited {
+  color: #323232;
 }
 
 .basket-full:hover {
@@ -701,7 +700,7 @@ img {
   padding-bottom: 26px;
 }
 
-.advantages-flex {
+.advantages-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1016,7 +1015,7 @@ img {
   padding-left: 27px;
 }
 
-.footer-flex {
+.footer-contain {
   display: flex;
   display-wrap: wrap;
   justify-content: space-between;
@@ -1067,11 +1066,11 @@ img {
   content: url("../img/vk.svg");
 }
 
-.common-flex {
+.common-container {
   display: flex;
   flex-wrap: wrap;
   width: 327px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .common {
@@ -1082,16 +1081,8 @@ img {
   line-height: 18px;
 }
 
-.common-flex-left {
-  display: flex;
-  flex-direction: column;
-  width: 130px;
-}
-
-.common-flex-right {
-  display: flex;
-  flex-direction: column;
-  width: 170px;
+.common li {
+  width: 162px;
 }
 
 .common a:visited {
@@ -1104,7 +1095,6 @@ img {
 }
 
 .for-providers {
-  display: flex;
   font-weight: 700;
 }
 
@@ -1113,15 +1103,10 @@ img {
   fill: #ffbc9e;
 }
 
-.htmlacademy-flex {
-  display: flex;
-  display-wrap: wrap;
-  flex-direction: column;
-}
-
 .htmlacademy {
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
 }
 
 .htmlacademy a:visited {
