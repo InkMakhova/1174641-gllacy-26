@@ -46,7 +46,6 @@ img {
   margin: 0 auto;
   padding-right: 27px;
   padding-left: 27px;
-  background-color: red;
 }
 
 .container-inner {
@@ -55,18 +54,17 @@ img {
   justify-content: space-between;
   width: 1146px;
   padding-top: 9px;
-  background-color: yellow;
 }
 
 .container-inner-part {
   display: flex;
   flex-wrap: wrap;
-  background-color: greenyellow;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
+  z-index: 1;
 }
   
 .nav-list-container {
@@ -77,7 +75,10 @@ img {
   padding: 0;
   margin: 0;
   margin-left: 5px;
-  background-color: palevioletred;
+}
+
+.nav-list-container li {
+  margin-right: 1px;
 }
 
 .nav-link {
@@ -88,7 +89,6 @@ img {
   line-height: 18px;
   border-radius: 15px;
   padding: 5px 13px;
-  margin-right: 1px;
 }
 
 .nav-link:visited {
@@ -145,8 +145,11 @@ img {
   background-color: #f6b5a5;
 }
 
-.main-menu-link {
-  display: flex;
+.main-menu-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.main-menu-link:not(.search) {
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 500;
@@ -155,12 +158,30 @@ img {
   background-color: rgba(247, 246, 243, 0.2);
   border: 1px solid transparent;
   border-radius: 20px;
-  padding: 8px 17px;
-  margin-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px; 
+  padding-right: 17px;
+  padding-left: 45px;
+  margin: 0;
+  position: relative;
 }
 
-.main-menu-link:last-child {
+.main-menu-list a.search {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: rgba(247, 246, 243, 0.2);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 8px;
   margin: 0;
+}
+
+.main-menu-link:not(.search) svg {
+  position: absolute;
+  left: 15px;
 }
 
 .main-menu-link:visited {
@@ -171,20 +192,11 @@ img {
   color: #323232;
   background-color: #f8f7f4;
   border-color: #f8f7f4;
-  
 }
 
 .main-menu-link:hover g,
 .main-menu-link:hover:not(.basket-full) path {
   fill: #000000;
-}
-
-.search {
-  padding: 8px;
-}
-
-.main-menu-link:not(.search) svg {
-  margin-right: 7px;
 }
 
 .basket-full {
@@ -244,21 +256,29 @@ img {
   display: none;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .work-time {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-align:  right;
-  }
+  margin-bottom: 5px;
+}
 
 .contact-phone {
-  display: block;
+  display: inline-block;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
   text-align: right;
+  z-index: 1;
 }
 
 .contact-phone:visited {
@@ -272,12 +292,14 @@ img {
 
 .breadcrumbs {
   display: flex;
+  justify-content: flex-start;
   list-style: none;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #ffffff;       
   margin-bottom: 13px;
+  margin-top: -25px;
 }
 
 .breadcrumbs a:visited {
@@ -304,13 +326,19 @@ img {
   color: #ffffff;
 }
 
-.slide-list {
-  list-style: none;
-  /*margin-top: -115px;*/
+section .slide-list {
+  position: relative;
 }
 
-.slide-list image {
-  position: relative;
+.slide-list {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  top: -140px;
+}
+
+.slide-list img {
+  z-index: -1;
 }
 
 .slide-show {
@@ -320,8 +348,8 @@ img {
   line-height: 60px;
   text-align: center;
   position: absolute;
-  top: 410px;
-  left: 380px;
+  top: 390px;
+  left: 230px;
   margin: 0;
 }
 
@@ -340,8 +368,9 @@ img {
   border-radius: 30px;
   padding: 8px 43px 9px 41px;
   position: absolute;
-  top: 550px;
-  left: 580px;
+  top: 540px;
+  left: 430px;
+  z-index: 1;
 }
 
 .button-both:hover {
@@ -362,7 +391,7 @@ img {
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 120px;
+  bottom: 140px;
 }
 
 .dot {
@@ -388,8 +417,9 @@ img {
   flex-wrap: wrap;
   width: 1146px;
   justify-content: space-between;
-  /*margin-top: -260px;*/
+  margin-top: -390px;
   margin-bottom: 40px;
+  
 }
 
 .free {
@@ -401,6 +431,7 @@ img {
   padding-right: 21px;
   padding-bottom: 23px;
   padding-left: 20px;
+  z-index: 1;
 }
 
 .raspberry {
@@ -465,7 +496,6 @@ img {
   width: 1146px;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .item-list-container a:visited {
@@ -480,16 +510,15 @@ img {
   list-style: none;
   box-sizing: border-box;
   width: 267px;
-  padding-top: 6px;
-  padding-right: -14px;
-  padding-bottom: 22px;
-  padding-left: -13px;
   text-align: center;
   position: relative;
+  margin-bottom: 40px;
 }
 
-.item img {
-  border-radius: 50%;
+.item-image {
+  border-radius: 100%;
+  margin-bottom: 17px;
+  overflow: hidden;
 }
 
 .item svg {
@@ -498,18 +527,25 @@ img {
   left: 13px;
 }
 
-.item:hover {
-  box-sizing: content-box;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.2);
+.button-view {
+  display: none;
+}
+
+.item:hover .item-hover {
+  position: absolute;
+  top: -10px;
+  left: -13px;
+  bottom: -70px;
+  width: 293px;
   background-color: rgba(248, 247, 244, 0.2);
-  padding-left: 13px; 
-  padding-right: 13px;
-  padding-bottom: 100px 
+  z-index: 1;
 }
 
 .item:hover .button-view {
+  display: block;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
+  left: 45px;
   box-sizing: border-box;
   width: 200px;
   box-shadow: 0px 1px 2px 0 #ac1000;
@@ -522,7 +558,8 @@ img {
   text-align: center;
   color: #fefefe;
   padding: 10px 15px;
-}
+  z-index: 0;
+  }
 
 .price {
   font-weight: 700;
@@ -546,22 +583,6 @@ img {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-}
-
-.item:hover .button-view {
-  box-sizing: border-box;
-  width: 200px;
-  box-shadow: 0px 1px 2px 0 #ac1000;
-  background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-width: 0;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  color: #fefefe;
-  padding: 10px 15px;
-  margin-top: 15px;
 }
 
 .button-view:hover {
@@ -709,7 +730,7 @@ img {
 }
 
 .item-pages li:first-child svg{
-  transform: rotate(180deg); /*не работает поворот*/
+  transform: rotate(180deg);
 }
 
 .item-pages li:last-child path{
@@ -987,9 +1008,6 @@ img {
 .send:active {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
-}
-
-.contact-inner {
 }
 
 .map {
