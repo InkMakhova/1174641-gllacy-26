@@ -166,7 +166,7 @@ img {
   position: relative;
 }
 
-.main-menu-list a.search {
+.main-menu-list .search {
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 500;
@@ -271,7 +271,6 @@ img {
 }
 
 .contact-phone {
-  display: inline-block;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -339,6 +338,10 @@ section .slide-list {
 
 .slide-list img {
   z-index: -1;
+}
+
+.show:not(:first-child) {
+  display: none;
 }
 
 .slide-show {
@@ -412,6 +415,10 @@ section .slide-list {
   background-color: #ffffff;
 }
 
+.active {
+  
+}
+
 .free-inner {
   display: flex;
   flex-wrap: wrap;
@@ -419,7 +426,6 @@ section .slide-list {
   justify-content: space-between;
   margin-top: -390px;
   margin-bottom: 40px;
-  
 }
 
 .free {
@@ -527,11 +533,8 @@ section .slide-list {
   left: 13px;
 }
 
-.button-view {
+.item-hover {
   display: none;
-}
-
-.item:hover .item-hover {
   position: absolute;
   top: -10px;
   left: -13px;
@@ -541,8 +544,7 @@ section .slide-list {
   z-index: 1;
 }
 
-.item:hover .button-view {
-  display: block;
+.button-view {
   position: absolute;
   bottom: 15px;
   left: 45px;
@@ -558,8 +560,21 @@ section .slide-list {
   text-align: center;
   color: #fefefe;
   padding: 10px 15px;
-  z-index: 0;
-  }
+}
+
+.button-view:hover {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button-view:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+}
+
+.item:hover .item-hover {
+  display: block;
+}
 
 .price {
   font-weight: 700;
@@ -583,16 +598,8 @@ section .slide-list {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-}
-
-.button-view:hover {
-  box-shadow: 0px 1px 2px 0 #ac1000;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
-}
-
-.button-view:active {
-  box-shadow: inset 0px 2px 2px 0 #942718;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+  position: relative;
+  z-index: 3;
 }
 
 .page-title {
@@ -1110,7 +1117,6 @@ section .slide-list {
 
 .footer-contain {
   display: flex;
-  display-wrap: wrap;
   justify-content: space-between;
 }
 
