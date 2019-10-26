@@ -340,8 +340,12 @@ section .slide-list {
   z-index: -1;
 }
 
-.show:not(:first-child) {
+.slide-item {
   display: none;
+}
+
+.slide-item.show {
+  display: block;
 }
 
 .slide-show {
@@ -386,7 +390,11 @@ section .slide-list {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
 }
 
-.slider-dots {
+.slider {
+  position: relative;
+}
+
+.slider-controls {
   display: flex;
   list-style: none; 
   width: 80px;
@@ -394,10 +402,10 @@ section .slide-list {
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 140px;
+  bottom: 440px;
 }
 
-.dot {
+.slider-button {
   width: 20px;
   height: 20px;
   border: 2px solid #ffffff;
@@ -407,16 +415,16 @@ section .slide-list {
   outline: none;
 }
 
-.dot:hover {
+.slider-button:hover {
   background-color: rgba(255,255,255,0.4);
 }
 
-.dot:active {
+.slider-button:active {
   background-color: #ffffff;
 }
 
 .active {
-  
+  background-color: #ffffff;
 }
 
 .free-inner {
@@ -513,6 +521,7 @@ section .slide-list {
 }
 
 .item {
+  display: block;
   list-style: none;
   box-sizing: border-box;
   width: 267px;
@@ -522,15 +531,24 @@ section .slide-list {
 }
 
 .item-image {
-  border-radius: 100%;
+  width: 267px;
+  height: 267px;
+  border-radius: 50%;
   margin-bottom: 17px;
   overflow: hidden;
+  
+}
+.item:hover .item-image  {
+  position: relative;
+  z-index: 3;
 }
 
-.item svg {
+.item .hit {
+  display: block;
   position: absolute;
   top: 6px;
   left: 13px;
+  z-index: 4;
 }
 
 .item-hover {
@@ -585,6 +603,7 @@ section .slide-list {
   position: absolute;
   left: 13px;
   top: 214px;
+  z-index: 4;
 }
 
 .price span {
@@ -599,7 +618,7 @@ section .slide-list {
   line-height: 22px;
   text-align: center;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .page-title {
