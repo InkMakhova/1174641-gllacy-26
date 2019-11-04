@@ -91,6 +91,7 @@
       <h1 class="visually-hidden">Онлайн-магазин по продаже мороженого Глейсси-шоп</h1>
       <section class="container slider">
         <h2 class="visually-hidden">Хороший выбор</h2>
+        <div class="slider-inner" >
         <ul class="slide-list">
           <li class="slide-item show">
             <img src="img/fotoice1.png" width="1045" height="881" alt="Изображение: Крем-брюле и пломбир с малиновым джемом">
@@ -113,18 +114,34 @@
             </p>
             <a href="" class="button-both button-hover">Давайте оба!</a>
           </li>
+          
         </ul> 
-        <ul class="slider-controls">
+        </div>
+        <!--ul class="slider-controls">
           <li>
             <button type="button" aria-label="Листать" class="slider-button active"></button>
+            <input type="radio" id="btn-1" name="btn-1" checked>
+            <label for="btn-1"></label>
           </li>
           <li>
             <button type="button" aria-label="Листать" class="slider-button"></button>
+            <input type="radio" id="btn-2" name="btn-2" checked>
+            <label for="btn-2"></label>
           </li>
           <li>
             <button type="button" aria-label="Листать" class="slider-button"></button>
+            <input type="radio" id="btn-3" name="btn-3" checked>
+            <label for="btn-3"></label>
           </li>
-        </ul>
+        </ul-->
+        <div class="slider-controls">
+          <input type="radio" id="btn-1" name="btn" checked>
+          <input type="radio" id="btn-2" name="btn">
+          <input type="radio" id="btn-3" name="btn">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
       </section>
 
       <div class="container free-inner">
@@ -254,44 +271,39 @@
       </section>
       </div>
 
-      <div class="contact-inner">
+      
       <section class="map">
         <h2 class="visually-hidden">Яндекс-карта</h2>
-        <img src="img/map.png" alt="Схема проезда" class="yandex-map">
-        <img src="img/pin.svg" width="80" height="140" alt="Наш магазин на карте" class="pin">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.606054595127!2d30.324066638000453!3d59.938678861383345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfi!4v1572782020883!5m2!1sru!2sfi" width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <!--iframe src="https://yandex.ru/map-widget/v1/-/CGH1UI5j" width="100%" height="430" frameborder="1" allowfullscreen="true"></iframe-->
+          <div class="contact-inner">
+            <div class="form-contact">
+              <p class="address-name">Адрес главного офиса и офлайн-магазина:</p>
+              <p class="address-market">
+                <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong>
+              </p>
+              <p class="form-contact-orders-phrase">Для заказов по телефону:</p>
+              <p class="contact-phone-form">
+                <a href="tel:+78124502525">
+                  <strong>8 812 450-25-25</strong>
+                </a>
+              </p>
+              <p class="form-contact-timetable-phrase">(с 10 до 20 ежедневно)</p>
+              <a href="" class="button-feedback button-hover">Форма обратной связи</a>
+              <form action="https://echo.htmlacademy.ru" method="post" class="modal-feedback modal-show">
+                <p class="modal-title">Мы обязательно вам ответим!</p>
+                <button type="button" class="modal-close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
+                </button>
+                <input type="text" name="name" id="name" placeholder="Как вас зовут?" class="feedback-input input-hover">
+                <input type="email" name="email-for-answer" id="email-for-answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша почта для ответа?" class="feedback-input input-hover">
+                <textarea name="textarea" id="textarea-field" cols="20" rows="10" placeholder="Напишите что-нибудь..." class="feedback-text input-hover"></textarea>
+                <button type="submit" class="feedback-submit button-hover">Отправить</button>
+              </form>
+            </div>
+        </div>  
       </section>
-      <section class="form-contact">
-        <h2 class="visually-hidden">Как нас найти</h2>
-        <p class="address-name">
-          Адрес главного офиса и офлайн-магазина:
-        </p>
-        <p class="address-market">
-          <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong>
-        </p>
-        <p class="form-contact-orders-phrase">
-          Для заказов по телефону:
-        </p>
-        <p class="contact-phone-form">
-          <a href="tel:+78124502525">
-            <strong>8 812 450-25-25</strong>
-          </a>
-        </p>
-        <p class="form-contact-timetable-phrase">
-          (с 10 до 20 ежедневно)
-        </p>
-        <a href="" class="button-feedback button-hover">Форма обратной связи</a>
-        <form action="https://echo.htmlacademy.ru" method="post" class="modal-feedback modal-show">
-          <p class="modal-title">Мы обязательно вам ответим!</p>
-          <button type="button" class="modal-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
-          </button>
-          <input type="text" name="name" id="name" placeholder="Как вас зовут?" class="feedback-input input-hover">
-          <input type="email" name="email-for-answer" id="email-for-answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша почта для ответа?" class="feedback-input input-hover">
-          <textarea name="textarea" id="textarea-field" cols="20" rows="10" placeholder="Напишите что-нибудь..." class="feedback-text input-hover"></textarea>
-          <button type="submit" class="feedback-submit button-hover">Отправить</button>
-        </form>
-      </section>
-      </div>
+      
     </main>
 
     <footer class="container">
