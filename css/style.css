@@ -35,6 +35,7 @@ body {
   color: #ffffff;
   font-family: "Roboto", Arial, sans-serif;
   text-align: left;
+  overflow-x: hidden;
 }
 
 img {
