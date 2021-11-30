@@ -2,8 +2,8 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto.woff2") format("woff2"), 
-       url("../fonts/roboto.woff") format("woff"); 
+  src: url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/robotobold.woff2") format("woff2"), 
+  src: url("../fonts/robotobold.woff2") format("woff2"),
        url("../fonts/robotobold.woff") format("woff");
 }
 
@@ -37,8 +37,8 @@ body {
   text-align: left;
 }
 
-/* IE & Edge hack 
-@supports (-ms-ime-align:auto) { 
+/* IE & Edge hack
+@supports (-ms-ime-align:auto) {
   @media (min-width: 1146px) {
     body {
       overflow-x: hidden;
@@ -83,7 +83,7 @@ img {
   box-sizing: border-box;
   padding-bottom: 10px;
 }
-  
+
 .nav-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -244,7 +244,7 @@ img {
   border: 1px solid transparent;
   border-radius: 20px;
   padding-top: 8px;
-  padding-bottom: 8px; 
+  padding-bottom: 8px;
   padding-right: 17px;
   padding-left: 41px;
   margin: 0;
@@ -275,6 +275,7 @@ img {
 .main-menu-link:not(.search) svg {
   position: absolute;
   left: 13px;
+  top: 6px;
 }
 
 .main-menu-link {
@@ -456,7 +457,7 @@ img {
 
 .basket-items {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
   font-size: 13px;
@@ -594,7 +595,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  color: #ffffff;       
+  color: #ffffff;
   margin-bottom: 5px;
   margin-top: -20px;
 }
@@ -852,7 +853,7 @@ section .slide-list {
   border-radius: 50%;
   margin-bottom: 10px;
   overflow: hidden;
-  
+
 }
 .item:hover .item-image  {
   position: relative;
@@ -1194,7 +1195,7 @@ section .slide-list {
   margin-right: 20px;
   position: relative;
   cursor: pointer;
-  padding-left: 32px; 
+  padding-left: 32px;
 }
 
 .extenders label:last-child {
@@ -1334,7 +1335,7 @@ section .slide-list {
 }
 
 .item-pages li:active:not(:last-child):not(:first-child) a {
-  color: #000000; 
+  color: #000000;
 }
 
 .item-pages li:active {
@@ -1541,7 +1542,7 @@ section .slide-list {
   padding-left: 14px;
   margin: 0;
   margin-right: 7px;
-} 
+}
 
 .input-hover::placeholder {
   color: #999999;
@@ -1592,7 +1593,7 @@ section .slide-list {
 }
 
 .map iframe {
-  width: 100%; 
+  width: 100%;
   height: 430px;
   border: 0;
 }
@@ -1621,7 +1622,7 @@ section .slide-list {
   padding-left: 25px;
   border-radius: 20px;
   margin-left: auto;
-  pointer-events: all; 
+  pointer-events: all;
 }
 
 .address-name {
@@ -1866,7 +1867,7 @@ section .slide-list {
   border-bottom: 1px solid rgba(248, 248, 248, 0.2);
 }
 
-.common-container a:hover, 
+.common-container a:hover,
 .common-container a:active {
   color: #ffbc9e;
   border-bottom-color: #ffbc9e;
@@ -1897,7 +1898,7 @@ section .slide-list {
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid rgba(248, 248, 248, 0.2);
-} 
+}
 
 .copyright a:hover,
 .copyright a:active {
