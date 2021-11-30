@@ -1208,7 +1208,7 @@ section .slide-list {
   width: 20px;
   height: 20px;
   border: 2px solid #ffffff;
-  border-radius: 2px;*/
+  border-radius: 2px;
   opacity: 0.8;
   position: absolute;
   top: -2px;
@@ -1246,6 +1246,9 @@ section .slide-list {
 
 .apply {
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 140px;
   min-height: 36px;
