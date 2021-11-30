@@ -877,6 +877,8 @@ section .slide-list {
   width: 293px;
   background-color: rgba(248, 247, 244, 0.2);
   z-index: 1;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .button-view {
