@@ -1247,7 +1247,6 @@ section .slide-list {
   box-shadow: inset 0 0 0 2px #ffffff;
   padding-right:  30px;
   padding-left: 30px;
-  padding: auto;
   color: #ffffff;
   border: none;
 }
@@ -1281,7 +1280,7 @@ section .slide-list {
   display: block;
   color: #ffffff;
   text-align: center;
-  padding: o;
+  padding: 0;
   margin: 0;
   padding-top: 4px;
 }
