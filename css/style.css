@@ -37,19 +37,6 @@ body {
   text-align: left;
 }
 
-/* IE & Edge hack
-@supports (-ms-ime-align:auto) {
-  @media (min-width: 1146px) {
-    body {
-      overflow-x: hidden;
-    }
-  }
-}*/
-
-img {
-  max-width: 100%;
-}
-
 .container {
   width: 1146px;
   margin: 0 auto;
@@ -632,6 +619,8 @@ section .slide-list {
 }
 
 .slide-list {
+  display: inline-block;
+  vertical-align: top;
   list-style: none;
   margin: 0;
   position: absolute;
@@ -647,6 +636,7 @@ section .slide-list {
 
 .slide-item {
   display: none;
+  float: left;
 }
 
 .slide-item.show {
