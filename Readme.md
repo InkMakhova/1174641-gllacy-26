@@ -24,4 +24,5 @@
 4. Раскладка сеточных элементов выполнена флексах;
 5. Для слайдера и взамодействия с формой обратной связи испозован JS;
 
-Проект выполнен в рамках курса <a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
+Макет проекта предоставлен в рамках курса <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+<a href="https://htmlacademy.ru"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
