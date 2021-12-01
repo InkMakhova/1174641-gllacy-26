@@ -43,22 +43,34 @@ const modal = body.querySelector('.modal-feedback');
 const showModalButton = body.querySelector('.button-feedback');
 const closeModalButton = modal.querySelector('.modal-close');
 
-const openModal = (evt) => {
+const clickOpenHandler = (evt) => {
   evt.preventDefault();
   modal.classList.add('modal-show');
-  modal.removeEventListener('click', openModal);
+  modal.removeEventListener('click', clickOpenHandler);
   showModalButton.classList.add('disabled');
 
-  closeModalButton.addEventListener('click', closeModal);
+  closeModalButton.addEventListener('click', clickCloseHandler);
+
+  window.addEventListener('keydown', escDownHandler);
 }
 
-const closeModal = (evt) => {
+const clickCloseHandler = (evt) => {
   evt.preventDefault();
   modal.classList.remove('modal-show');
-  closeModalButton.removeEventListener('click', closeModal);
+  closeModalButton.removeEventListener('click', clickCloseHandler);
   showModalButton.classList.remove('disabled');
 }
 
-showModalButton.addEventListener('click', openModal);
+const escDownHandler = (evt) => {
+  if (evt.key === 'Esc' || evt.key === 'Escape') {
+    modal.classList.remove('modal-show');
+    showModalButton.classList.remove('disabled');
+
+    closeModalButton.removeEventListener('click', clickCloseHandler);
+    window.addEventListener('keydown', escDownHandler);
+  }
+}
+
+showModalButton.addEventListener('click', clickOpenHandler);
 
 
