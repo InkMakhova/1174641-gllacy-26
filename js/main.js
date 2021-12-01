@@ -72,5 +72,3 @@ const escDownHandler = (evt) => {
 }
 
 showModalButton.addEventListener('click', clickOpenHandler);
-
-
