@@ -7,10 +7,10 @@ const BackgroundColors = {
 }
 
 //слайдер
-let slides = document
+let slides = body
   .querySelectorAll('.slide-item');
 
-let controls = document
+let controls = body
   .querySelector('.slider-controls')
   .querySelectorAll('input');
 
@@ -36,3 +36,29 @@ controls.forEach((control, index) => {
     body.style.backgroundColor = setBackgroundColor(index);
   });
 });
+
+//модальное окно
+const modal = body.querySelector('.modal-feedback');
+
+const showModalButton = body.querySelector('.button-feedback');
+const closeModalButton = modal.querySelector('.modal-close');
+
+const openModal = (evt) => {
+  evt.preventDefault();
+  modal.classList.add('modal-show');
+  modal.removeEventListener('click', openModal);
+  showModalButton.classList.add('disabled');
+
+  closeModalButton.addEventListener('click', closeModal);
+}
+
+const closeModal = (evt) => {
+  evt.preventDefault();
+  modal.classList.remove('modal-show');
+  closeModalButton.removeEventListener('click', closeModal);
+  showModalButton.classList.remove('disabled');
+}
+
+showModalButton.addEventListener('click', openModal);
+
+
