@@ -1686,7 +1686,15 @@ section .slide-list {
   display: block;
 }
 
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+
 .modal-feedback {
+  display: none;
   box-sizing: border-box;
   width: 478px;
   padding: 20px 26px 26px 24px;
@@ -1701,7 +1709,7 @@ section .slide-list {
 }
 
 .modal-show {
-  display: none;
+  display: block;
 }
 
 .modal-title {
