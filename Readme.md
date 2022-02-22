@@ -25,4 +25,4 @@
 4. Раскладка сеточных элементов выполнена флексах;
 5. Для слайдера и взамодействия с формой обратной связи испозован JS;
 
-Макет проекта предоставлен в рамках курса <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+Макет проекта в <a href="https://www.figma.com/file/mmkaRtdChnDxDP0rym2Bu6/HTML-1-%2F-%D0%93%D0%BB%D0%B5%D0%B9%D1%81%D0%B8-(30)?node-id=0%3A1">Figma</a>
